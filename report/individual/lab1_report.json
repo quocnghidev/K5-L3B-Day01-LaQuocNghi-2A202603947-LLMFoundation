@@ -1,0 +1,77 @@
+{
+ "seed": 6571,
+ "predictions": {
+  "ml_f1": {
+   "text": "0.9",
+   "time": "16:32:58"
+  },
+  "ml_lr": {
+   "text": "0.001",
+   "time": "16:33:09"
+  },
+  "dl_curve": {
+   "text": "val loss không giảm mãi, MLP sẽ kém hơn logistic regression ở Phần 1 về F1",
+   "time": "16:33:41"
+  },
+  "dl_relu": {
+   "text": "tương đương logistic regression và F1 sẽ nằm sát logistic regression ở phần 1",
+   "time": "16:36:50"
+  }
+ },
+ "checks": {
+  "1.1 vectorize": true,
+  "1.2 sigmoid / predict_proba": true,
+  "1.3 train_logreg": true,
+  "1.4 metrics": true,
+  "2.1 build_mlp": true,
+  "2.2 train_mlp": true
+ },
+ "experiments": [
+  {
+   "key": "ml_f1",
+   "time": "16:32:58"
+  },
+  {
+   "key": "ml_lr",
+   "time": "16:33:09"
+  },
+  {
+   "key": "dl_curve",
+   "time": "16:33:41"
+  },
+  {
+   "key": "dl_relu",
+   "time": "16:35:22"
+  },
+  {
+   "key": "dl_relu",
+   "time": "16:36:51"
+  }
+ ],
+ "results": {
+  "1. BoW + LogReg (tự code)": {
+   "accuracy": 0.9754838709677419,
+   "precision": 1.0,
+   "recall": 0.7978723404255319,
+   "f1": 0.8875739644970414,
+   "f1_SUB": 0.8571428571428571,
+   "train_s": 9.370429653999963,
+   "msg_per_s": 9550.104437934318,
+   "p50_ms": 0.04352899941295618,
+   "p95_ms": 0.11236990130782923,
+   "usd_per_1k": 0.0
+  },
+  "2. BoW + MLP (deep learning)": {
+   "accuracy": 0.9780645161290322,
+   "precision": 0.9873417721518988,
+   "recall": 0.8297872340425532,
+   "f1": 0.9017341040462428,
+   "f1_SUB": 0.8571428571428571,
+   "train_s": 17.13577745299881,
+   "msg_per_s": 24127.806267138152,
+   "p50_ms": 0.4017704995931126,
+   "p95_ms": 0.6354610502967261,
+   "usd_per_1k": 0.0
+  }
+ }
+}
